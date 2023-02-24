@@ -46,9 +46,9 @@
 
             <div class="form-group">
               <strong>Place:</strong>
-              <select name="place_id" class="block w-full mt-1 rounded-md form-control" value="{{ $student->place->name }}>
-                <option value=" {{$student->place->name}} ">Select Place</option>
-                @foreach ($places as $place)
+              <select name="place_id" id="place_id" class="block w-full mt-1 rounded-md form-control">
+                <option value="{{$student->place->id}}">{{$student->place->name}}</option>
+                @foreach ($places as $key => $place)
                 <option value=" {{$place->id}}">{{$place->name}}</option>
                 @endforeach
               </select>

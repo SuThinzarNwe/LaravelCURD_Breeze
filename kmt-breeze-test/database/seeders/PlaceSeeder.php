@@ -13,13 +13,6 @@ class PlaceSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 10; $i++) {
-            Place::create([
-                'name' => 'Category'
-            ]);
-        }
-        // DB::table('categories')->insert([
-        //     'name' => 'Category'
-        // ]);
+        Place::factory(10)->name();
     }
 }

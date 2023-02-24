@@ -85,6 +85,7 @@ class StudentController extends Controller
     public function edit($id)
     {
         $student = Student::find($id);
+        info($student);
         $places = Place::all();
         $categories = Category::all();
         return view('students.edit', compact('places', 'categories', 'student'));
